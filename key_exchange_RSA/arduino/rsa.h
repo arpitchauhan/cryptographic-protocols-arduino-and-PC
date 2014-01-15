@@ -21,6 +21,8 @@ along with the software.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "util.h"
 
+extern bool isprime(long n, int iterations);
+
 char* dec2bin(int n) {
 	long r;
         int c = 0, i, b[100];
@@ -109,7 +111,7 @@ long* rsa_decrypt(long* ciphertext_list, long* key, int length) {
 	return plaintext_list;
 }
 
-/* The following functions can be used for generating a pair of RSA keys.
+/* The following functions can be used for generating a pair of RSA keys. */
 
 long gcd(long a, long b){
   // Returns greatest common denominator by using recursive Euclidean algorithm
@@ -245,4 +247,3 @@ long* generate_keys(long lower, long upper) {
   
   return Key;
 }
-*/
