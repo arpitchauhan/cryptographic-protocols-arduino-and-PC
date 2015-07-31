@@ -20,7 +20,7 @@ In-depth discussion of the project can be found at: https://dl.dropboxuserconten
 
 COPYRIGHT NOTICE
 
-Copyright (C) 2013 Arpit Chauhan, Inderjit Sidhu and Archit Pandey
+Copyright (C) 2013 Arpit Chauhan, Inderjit Sidhu, Aditya Pandey and Archit Pandey
 
 cryptographic-protocols-arduino-and-PC is free software: you can redistribute it and/or modify 
 it under the terms of the GNU General Public License as published by 
