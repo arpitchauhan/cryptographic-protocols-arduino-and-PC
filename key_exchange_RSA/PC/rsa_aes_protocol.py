@@ -30,6 +30,15 @@ RSA_Others_Public_Key = [5723, 5]
 MOST_NO_OF_DIGITS_IN_LENGTH = 10
 COMPORT = 6
 
+def choose_COM_port():
+    global COMPORT
+    print "Enter the COM port name. It could be an integer for COM%d, or a path like '/dev/ttyACM0'"
+    COM_input = raw_input("COM port name (default is '%s'): " %COMPORT)
+    if COM_input.isdigit():
+        COMPORT = int(COM_input)
+    elif COM_input:
+        COMPORT = COM_input
+    return
 
 def cycle_arduino_to_PC(AES_key_exchange_function, arduino, caller="DiffieHellman"):
     #receiving ciphertext
@@ -127,6 +136,7 @@ def generate_AES_Key_and_exchange(arduino):
     return AES_Key
     
 def main():
+    choose_COM_port()
     arduino = serial.Serial(COMPORT, 115200)
     arduino.timeout = 1.5
     
